@@ -1,0 +1,7 @@
+pipeline:
+  clone:
+    git:
+      image: plugins/git
+      recursive: true
+      submodule_override:
+        react-music: https://github.com/biblesyme/react-music.git
