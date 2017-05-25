@@ -5,3 +5,7 @@ pipeline:
       recursive: true
       submodule_override:
         react-music: https://github.com/biblesyme/react-music.git
+  list:
+    image: busybox
+    commands:
+      - ls -al
