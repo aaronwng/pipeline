@@ -9,3 +9,5 @@ pipeline:
     image: busybox
     commands:
       - ls -al
+      - echo 'hello' > test.txt
+      - cat test.txt
