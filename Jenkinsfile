@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
         parallel(
           "bb": {
@@ -13,6 +13,11 @@ pipeline {
             
           }
         )
+      }
+    }
+    stage('bb') {
+      steps {
+        sh 'ls'
       }
     }
   }
