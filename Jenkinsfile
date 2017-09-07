@@ -18,6 +18,7 @@ pipeline {
     stage('bb') {
       steps {
         sh 'ls'
+        echo 'hello'
       }
     }
   }
