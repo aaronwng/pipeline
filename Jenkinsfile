@@ -5,7 +5,7 @@ pipeline {
       steps {
         parallel(
           "bb": {
-            sh 'a'
+            sh 'ls -al'
             
           },
           "aaa": {
