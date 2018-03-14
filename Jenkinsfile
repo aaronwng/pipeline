@@ -2,20 +2,26 @@ pipeline {
   agent any
   stages {
     stage('error') {
-      steps {
-        parallel(
-          "bb": {
+      parallel {
+        stage('bb') {
+          steps {
             sh 'ls -al'
-            
-          },
-          "aaa": {
-            sh 'ls'
-            
           }
-        )
+        }
+        stage('aaa') {
+          steps {
+            sh 'ls'
+          }
+        }
       }
     }
     stage('bb') {
+      agent {
+        docker {
+          image 'ubuntu'
+        }
+        
+      }
       steps {
         sh 'ls'
         echo 'hello'
