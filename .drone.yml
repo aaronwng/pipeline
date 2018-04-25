@@ -4,5 +4,6 @@ pipeline:
     image: busybox
     commands:
       - ls -al
+      - echo "branch test"
 branches: 
-  include: [ master ]
+  include: [ master, test ]
