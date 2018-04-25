@@ -1,6 +1,5 @@
 pipeline:
   list:
-    branch: master
     image: busybox
     commands:
       - ls -al
