@@ -3,3 +3,5 @@ pipeline:
     image: busybox
     commands:
       - ls -al
+branches: 
+  include: [ master, test]
