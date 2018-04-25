@@ -1,0 +1,6 @@
+pipeline:
+  list:
+    image: busybox
+    commands:
+      - ls -al
+      - echo "branch test"
